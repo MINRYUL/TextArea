@@ -21,7 +21,7 @@ final class HomeViewController: BaseViewController, StoryboardView {
     
     private func _configureView() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Home"
+        self.title = "Home".localized()
     }
 }
 
