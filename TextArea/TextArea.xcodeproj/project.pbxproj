@@ -24,8 +24,11 @@
 		AA228E71283FAB08003739F9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA228E70283FAB08003739F9 /* BaseViewController.swift */; };
 		AA228E74283FAD94003739F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA228E76283FAD94003739F9 /* Localizable.strings */; };
 		AA228E7B283FAE4B003739F9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA228E7A283FAE4B003739F9 /* String+Extension.swift */; };
+		AA6AF3ED2845112500CCDBF1 /* DocumentMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AF3E92845112500CCDBF1 /* DocumentMO+CoreDataClass.swift */; };
+		AA6AF3EE2845112500CCDBF1 /* DocumentMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AF3EA2845112500CCDBF1 /* DocumentMO+CoreDataProperties.swift */; };
+		AA6AF3EF2845112500CCDBF1 /* ItemMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AF3EB2845112500CCDBF1 /* ItemMO+CoreDataClass.swift */; };
+		AA6AF3F02845112500CCDBF1 /* ItemMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AF3EC2845112500CCDBF1 /* ItemMO+CoreDataProperties.swift */; };
 		AAC052A72844F58000D4C689 /* Documents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAC052A52844F58000D4C689 /* Documents.xcdatamodeld */; };
-		AAC052AA2844F64600D4C689 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC052A92844F64600D4C689 /* Folder.swift */; };
 		AAC052AC2844F69300D4C689 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC052AB2844F69300D4C689 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +77,11 @@
 		AA228E77283FADAB003739F9 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA228E78283FADB8003739F9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA228E7A283FAE4B003739F9 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		AA6AF3E92845112500CCDBF1 /* DocumentMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AA6AF3EA2845112500CCDBF1 /* DocumentMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AA6AF3EB2845112500CCDBF1 /* ItemMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AA6AF3EC2845112500CCDBF1 /* ItemMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AAC052A62844F58000D4C689 /* Documents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Documents.xcdatamodel; sourceTree = "<group>"; };
-		AAC052A92844F64600D4C689 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		AAC052AB2844F69300D4C689 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BEC7965FB9F9B9536F20207C /* Pods-TextArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextArea.release.xcconfig"; path = "Target Support Files/Pods-TextArea/Pods-TextArea.release.xcconfig"; sourceTree = "<group>"; };
 		FA25562BC7DE65F25EE5E158 /* Pods_TextArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,7 +266,10 @@
 		AAC052A82844F63800D4C689 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				AAC052A92844F64600D4C689 /* Folder.swift */,
+				AA6AF3E92845112500CCDBF1 /* DocumentMO+CoreDataClass.swift */,
+				AA6AF3EA2845112500CCDBF1 /* DocumentMO+CoreDataProperties.swift */,
+				AA6AF3EB2845112500CCDBF1 /* ItemMO+CoreDataClass.swift */,
+				AA6AF3EC2845112500CCDBF1 /* ItemMO+CoreDataProperties.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -507,16 +516,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6AF3ED2845112500CCDBF1 /* DocumentMO+CoreDataClass.swift in Sources */,
 				AAC052A72844F58000D4C689 /* Documents.xcdatamodeld in Sources */,
 				AA228E3A283F9EE3003739F9 /* HomeViewController.swift in Sources */,
 				AA228E7B283FAE4B003739F9 /* String+Extension.swift in Sources */,
+				AA6AF3EF2845112500CCDBF1 /* ItemMO+CoreDataClass.swift in Sources */,
 				AA228E6B283FA7C1003739F9 /* HomeViewReactor.swift in Sources */,
 				AA228E36283F9EE3003739F9 /* AppDelegate.swift in Sources */,
 				AA228E38283F9EE3003739F9 /* SceneDelegate.swift in Sources */,
 				AA228E6E283FAA96003739F9 /* TextAreaStoryBoard.swift in Sources */,
+				AA6AF3F02845112500CCDBF1 /* ItemMO+CoreDataProperties.swift in Sources */,
+				AA6AF3EE2845112500CCDBF1 /* DocumentMO+CoreDataProperties.swift in Sources */,
 				AA228E71283FAB08003739F9 /* BaseViewController.swift in Sources */,
 				AAC052AC2844F69300D4C689 /* CoreDataManager.swift in Sources */,
-				AAC052AA2844F64600D4C689 /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
