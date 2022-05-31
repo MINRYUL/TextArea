@@ -2,7 +2,7 @@
 //  ItemMO+CoreDataClass.swift
 //  TextArea
 //
-//  Created by 김민창 on 2022/05/30.
+//  Created by 김민창 on 2022/05/31.
 //
 //
 

@@ -2,7 +2,7 @@
 //  DocumentMO+CoreDataProperties.swift
 //  TextArea
 //
-//  Created by 김민창 on 2022/05/30.
+//  Created by 김민창 on 2022/05/31.
 //
 //
 
@@ -16,7 +16,6 @@ extension DocumentMO {
         return NSFetchRequest<DocumentMO>(entityName: "Document")
     }
 
-    @NSManaged public var identity: UUID?
     @NSManaged public var name: String?
     @NSManaged public var paranet: UUID?
     @NSManaged public var children: NSOrderedSet?

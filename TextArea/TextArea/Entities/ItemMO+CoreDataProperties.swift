@@ -2,7 +2,7 @@
 //  ItemMO+CoreDataProperties.swift
 //  TextArea
 //
-//  Created by 김민창 on 2022/05/30.
+//  Created by 김민창 on 2022/05/31.
 //
 //
 
@@ -17,7 +17,6 @@ extension ItemMO {
     }
 
     @NSManaged public var data: String?
-    @NSManaged public var identity: UUID?
     @NSManaged public var name: String?
     @NSManaged public var document: DocumentMO?
 

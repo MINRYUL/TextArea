@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Document" representedClassName=".DocumentMO" syncable="YES">
-        <attribute name="identity" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="paranet" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="children" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Document"/>
@@ -9,12 +8,11 @@
     </entity>
     <entity name="Item" representedClassName=".ItemMO" syncable="YES">
         <attribute name="data" attributeType="String"/>
-        <attribute name="identity" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="document" maxCount="1" deletionRule="Nullify" destinationEntity="Document" inverseName="items" inverseEntity="Document"/>
     </entity>
     <elements>
-        <element name="Document" positionX="-3.9385986328125" positionY="-118.6492919921876" width="128" height="118"/>
-        <element name="Item" positionX="-45" positionY="45" width="128" height="103"/>
+        <element name="Document" positionX="-3.9385986328125" positionY="-118.6492919921876" width="128" height="103"/>
+        <element name="Item" positionX="-45" positionY="45" width="128" height="88"/>
     </elements>
 </model>
