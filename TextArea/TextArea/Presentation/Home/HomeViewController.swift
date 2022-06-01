@@ -15,10 +15,13 @@ import ReactorKit
 final class HomeViewController: BaseViewController, StoryboardView {
     typealias Reactor = HomeViewReactor
     
+    private let _widthInset: CGFloat = 60
+    private let _homeReactor = HomeViewReactor()
+    
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
     // MARK: Properties
-    let dataSource = RxCollectionViewSectionedAnimatedDataSource<HomeListSection>(
+    let dataSource = RxCollectionViewSectionedReloadDataSource<HomeListSection>(
         configureCell: { dataSource, collectionView, indexPath, item in
             
             switch item {
@@ -47,8 +50,11 @@ final class HomeViewController: BaseViewController, StoryboardView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self._configureView()
         self._configureCollectionView()
+        
+        self.bind(reactor: self._homeReactor)
     }
     
     private func _configureView() {
@@ -61,13 +67,17 @@ final class HomeViewController: BaseViewController, StoryboardView {
         HomeCollectionViewCell.register(to: self.homeCollectionView)
         
         self.homeCollectionView.collectionViewLayout = self._makeTableFlowLayout()
+        self.homeCollectionView.contentInset = UIEdgeInsets(top: 10, left: 30, bottom: 70, right: 30)
     }
     
     private func _makeTableFlowLayout() -> UICollectionViewFlowLayout {
         let screenBounds = UIScreen.main.bounds
         
         let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: screenBounds.width, height: 50)
+        flowLayout.itemSize = CGSize(
+            width: screenBounds.width - self._widthInset,
+            height: 40
+        )
         return flowLayout
     }
     
@@ -75,7 +85,10 @@ final class HomeViewController: BaseViewController, StoryboardView {
         let screenBounds = UIScreen.main.bounds
         
         let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: screenBounds.width / 3, height: (screenBounds.width / 3) + 30)
+        flowLayout.itemSize = CGSize(
+            width: (screenBounds.width - self._widthInset)/3 - 10,
+            height: (screenBounds.width - self._widthInset)/3 + 10
+        )
         return flowLayout
     }
 }

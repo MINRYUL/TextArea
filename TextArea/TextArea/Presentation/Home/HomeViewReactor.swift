@@ -36,6 +36,7 @@ final class HomeViewReactor: Reactor {
                         HomeCellModel.Table(data: HomeModel(identity: UUID(), name: "Test3", fileType: .folder)),
                         HomeCellModel.Table(data: HomeModel(identity: UUID(), name: "Test4", fileType: .folder))
                     ],
+                    titleKey: "Folder",
                     identity: UUID()
                 ),
                 HomeListSection(
@@ -45,6 +46,7 @@ final class HomeViewReactor: Reactor {
                         HomeCellModel.Table(data: HomeModel(identity: UUID(), name: "Test3", fileType: .file)),
                         HomeCellModel.Table(data: HomeModel(identity: UUID(), name: "Test4", fileType: .file))
                     ],
+                    titleKey: "File",
                     identity: UUID()
                 )
             ]

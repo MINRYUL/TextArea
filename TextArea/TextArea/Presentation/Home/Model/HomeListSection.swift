@@ -22,6 +22,7 @@ struct HomeModel {
 
 struct HomeListSection {
     var items: [HomeCellModel]
+    var titleKey: String?
     var identity: UUID
 }
 
