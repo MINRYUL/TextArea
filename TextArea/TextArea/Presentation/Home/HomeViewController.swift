@@ -102,6 +102,8 @@ final class HomeViewController: BaseViewController, StoryboardView {
             width: screenBounds.width - self._widthInset,
             height: 40
         )
+        flowLayout.minimumInteritemSpacing = 5
+        flowLayout.minimumLineSpacing = 5
         flowLayout.headerReferenceSize = CGSize(width: screenBounds.width, height: 60)
         return flowLayout
     }
@@ -114,6 +116,8 @@ final class HomeViewController: BaseViewController, StoryboardView {
             width: (screenBounds.width - self._widthInset)/3 - 10,
             height: (screenBounds.width - self._widthInset)/3 + 10
         )
+        flowLayout.minimumInteritemSpacing = 8
+        flowLayout.minimumLineSpacing = 8
         flowLayout.headerReferenceSize = CGSize(width: screenBounds.width, height: 80)
         return flowLayout
     }
