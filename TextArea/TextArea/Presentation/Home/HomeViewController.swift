@@ -15,7 +15,7 @@ import ReactorKit
 final class HomeViewController: BaseViewController, StoryboardView {
     typealias Reactor = HomeViewReactor
     
-    private let _widthInset: CGFloat = 60
+    private let _widthInset: CGFloat = 40
     private let _homeReactor = HomeViewReactor()
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
@@ -45,6 +45,24 @@ final class HomeViewController: BaseViewController, StoryboardView {
                 
                 return cell
             }
+        },
+        configureSupplementaryView: { dataSource, collectionView, kind, indexPath ->
+            UICollectionReusableView in
+            switch kind {
+            case UICollectionView.elementKindSectionHeader:
+                let headerData = dataSource[indexPath.section]
+                
+                guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeHeaderView.identifier, for: indexPath) as? HomeHeaderView,
+                    let titleKey = headerData.titleKey else {
+                  return UICollectionReusableView()
+                }
+                
+                headerView.display(titleKey: titleKey)
+                
+                return headerView
+            default:
+                assert(false, "Unexpected element kind")
+            }
         }
     )
     
@@ -65,9 +83,15 @@ final class HomeViewController: BaseViewController, StoryboardView {
     private func _configureCollectionView() {
         HomeTableViewCell.register(to: self.homeCollectionView)
         HomeCollectionViewCell.register(to: self.homeCollectionView)
+        HomeHeaderView.register(to: self.homeCollectionView)
         
         self.homeCollectionView.collectionViewLayout = self._makeTableFlowLayout()
-        self.homeCollectionView.contentInset = UIEdgeInsets(top: 10, left: 30, bottom: 70, right: 30)
+        self.homeCollectionView.contentInset = UIEdgeInsets(
+            top: 10,
+            left: _widthInset/2 - 10,
+            bottom: 70,
+            right: _widthInset/2 - 10
+        )
     }
     
     private func _makeTableFlowLayout() -> UICollectionViewFlowLayout {
@@ -78,6 +102,7 @@ final class HomeViewController: BaseViewController, StoryboardView {
             width: screenBounds.width - self._widthInset,
             height: 40
         )
+        flowLayout.headerReferenceSize = CGSize(width: screenBounds.width, height: 60)
         return flowLayout
     }
     
@@ -89,6 +114,7 @@ final class HomeViewController: BaseViewController, StoryboardView {
             width: (screenBounds.width - self._widthInset)/3 - 10,
             height: (screenBounds.width - self._widthInset)/3 + 10
         )
+        flowLayout.headerReferenceSize = CGSize(width: screenBounds.width, height: 80)
         return flowLayout
     }
 }

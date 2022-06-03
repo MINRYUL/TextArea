@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeTableViewCell: UICollectionViewCell {
+final class HomeTableViewCell: UICollectionViewCell {
     static let identifier = "HomeTableViewCell"
     
     @IBOutlet weak var imageView: UIImageView!
@@ -39,9 +39,9 @@ class HomeTableViewCell: UICollectionViewCell {
     func display(cellModel: HomeModel) {
         switch cellModel.fileType {
         case .file:
-            self.imageView.image = UIImage(systemName: "text.book.closed")
+            self.imageView.image = UIImage(systemName: "doc")
         case .folder:
-            self.imageView.image = UIImage(systemName: "folder.fill")
+            self.imageView.image = UIImage(systemName: "folder")
         }
         
         self.nameLabel.text = cellModel.name

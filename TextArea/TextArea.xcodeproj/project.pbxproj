@@ -33,6 +33,8 @@
 		AA228E71283FAB08003739F9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA228E70283FAB08003739F9 /* BaseViewController.swift */; };
 		AA228E74283FAD94003739F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA228E76283FAD94003739F9 /* Localizable.strings */; };
 		AA228E7B283FAE4B003739F9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA228E7A283FAE4B003739F9 /* String+Extension.swift */; };
+		AA4D3ABE284A2C22007BDAD6 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D3ABD284A2C22007BDAD6 /* HomeHeaderView.swift */; };
+		AA4D3AC0284A2C2D007BDAD6 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4D3ABF284A2C2D007BDAD6 /* HomeHeaderView.xib */; };
 		AAC052A72844F58000D4C689 /* Documents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAC052A52844F58000D4C689 /* Documents.xcdatamodeld */; };
 		AAC052AC2844F69300D4C689 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC052AB2844F69300D4C689 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,8 @@
 		AA228E77283FADAB003739F9 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA228E78283FADB8003739F9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA228E7A283FAE4B003739F9 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		AA4D3ABD284A2C22007BDAD6 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		AA4D3ABF284A2C2D007BDAD6 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		AAC052A62844F58000D4C689 /* Documents.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Documents.xcdatamodel; sourceTree = "<group>"; };
 		AAC052AB2844F69300D4C689 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BEC7965FB9F9B9536F20207C /* Pods-TextArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextArea.release.xcconfig"; path = "Target Support Files/Pods-TextArea/Pods-TextArea.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				AA12E491284659D40099DB36 /* HomeCollectionViewCell.xib */,
 				AA12E48F284656F20099DB36 /* HomeTableViewCell.swift */,
 				AA12E493284659E10099DB36 /* HomeTableViewCell.xib */,
+				AA4D3ABD284A2C22007BDAD6 /* HomeHeaderView.swift */,
+				AA4D3ABF284A2C2D007BDAD6 /* HomeHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				AA12E492284659D40099DB36 /* HomeCollectionViewCell.xib in Resources */,
 				AA228E42283F9EE4003739F9 /* LaunchScreen.storyboard in Resources */,
 				AA228E74283FAD94003739F9 /* Localizable.strings in Resources */,
+				AA4D3AC0284A2C2D007BDAD6 /* HomeHeaderView.xib in Resources */,
 				AA228E3F283F9EE4003739F9 /* Assets.xcassets in Resources */,
 				AA12E494284659E10099DB36 /* HomeTableViewCell.xib in Resources */,
 				AA228E3D283F9EE3003739F9 /* Home.storyboard in Resources */,
@@ -549,6 +556,7 @@
 				AA12E48E284652E10099DB36 /* HomeCollectionViewCell.swift in Sources */,
 				AA12E48728464AB30099DB36 /* ItemMO+CoreDataClass.swift in Sources */,
 				AA228E6B283FA7C1003739F9 /* HomeViewReactor.swift in Sources */,
+				AA4D3ABE284A2C22007BDAD6 /* HomeHeaderView.swift in Sources */,
 				AA228E36283F9EE3003739F9 /* AppDelegate.swift in Sources */,
 				AA228E38283F9EE3003739F9 /* SceneDelegate.swift in Sources */,
 				AA228E6E283FAA96003739F9 /* TextAreaStoryBoard.swift in Sources */,
